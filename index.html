@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Echoes</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="tab-nav">
+    <button class="tab-btn active" data-tab="home">Home</button>
+    <button class="tab-btn" data-tab="idea">Idea</button>
+    <button class="tab-btn" data-tab="visualjourney">Visual Journey</button>
+    <button class="tab-btn" data-tab="workinglog">Working Log</button>
+    <button class="tab-btn" data-tab="artworkdemo">Artwork Demo</button>
+    <button class="tab-btn" data-tab="reflection">Reflection</button>
+  </nav>
+
+  <div class="content-container">
+
+    <!-- ===================== Home ===================== -->
+    <div class="tab-content active" id="home">
+      <header class="hero">
+        <h1>Digital Echoes</h1>
+        <p class="subtitle">Human-AI Generative Interactive Art</p>
+        <p class="intro">
+          The user's mouse movement and clicks serve as input signals from the real world; the AI Agent acts as a generating agent, receiving interaction signals, triggering events and leaving echo trails. The flowing particles and colliding spheres represent digital memories. Each user interaction leaves a gradually diminishing trace in the virtual space, just like the echoes of memory. The user collaborates with the AI to generate unique dynamic scenes in real <time datetime="" class=""></time>
+        </p>
+
+        <div class="canvas-panel-wrap">
+          <div id="hero-canvas-container"></div>
+
+          <div class="control-panel">
+            <h3>Speed Control</h3>
+
+            <label>Speed
+              <input type="range" id="randomness" min="0" max="100" value="40">
+            </label>
+
+            <button id="regenerateSeed">Reseed (R key)</button>
+            <p class="control-hint">
+              Adjust speed slider to change sphere movement.<br>
+              Click canvas to change background colour.<br>
+              Collision creates colour shift + ripple echoes.
+            </p>
+            <div id="seedInfo"></div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- ===================== Idea ===================== -->
+    <div class="tab-content" id="idea">
+      <h1>Idea Presentation</h1>
+
+      <section class="idea-block">
+        <h2>01 — Title & Core Idea</h2>
+        <p><strong>Digital Echoes</strong>  is an interactive generative art piece with "digital memory" as its core metaphor. Human interaction behaviors (mouse movement, clicks) serve as external inputs, while the AI Agent acts as the generating agent, receiving signals, triggering events, and leaving echo.The composition is made up of memory particles and elastic spheres: The collision of the spheres represents the encounter and impact of memories, while the trailing of particles and ripples represent the echoes that remain after the memory dissipates. Users are not mere viewers but co-creators. Every mouse movement and click by the user transmits signals to the AI agent, which calculates the movement, color, and trajectory of the particles in real time. The two collaborate to generate fleeting and irreproducible flowing digital images on the canvas. <traces class=""></traces></p>
+      </section>
+
+      <section class="idea-block">
+        <h2>02 — Motivation & Interests</h2>
+        <p>I am interested in how memory is reshaped by digital systems and AI. When personal thoughts, actions and data are stored online, they become material that machines can reorganise, remix and reinterpret. Digital Echoes makes this process visible by translating interaction into dynamic visual traces. The project explores human-AI collaboration not as automation, but as a creative partnership.</p>
+      </section>
+
+      <section class="idea-block">
+        <h2>03 — Inspiration & References</h2>
+        <ul>
+          <li>Casey Reas & Ben Fry — generative systems and particle-based visual aesthetics</li>
+          <li>Ryoji Ikeda — minimalist data visualisation and digital rhythm</li>
+          <li>Refik Anadol — AI memory archives and machine interpretation of human experience</li>
+        </ul>
+      </section>
+
+      <section class="idea-block">
+        <h2>04 — Pathway & Production Plan</h2>
+        <p><strong>Pathway:</strong> Net-based creative coding</p>
+        <ol>
+          <li>Foundation: Develop p5.js canvas, implement mouse-triggered particle system, test browser responsiveness.</li>
+          <li>Human-AI integration: Use AI to propose generative behaviour rules for particles; I will curate, revise and integrate these logics into the codebase.</li>
+          <li>Final iteration & documentation: Optimise web performance, refine visual aesthetics, record presentation footage, complete visual journey and working log, write the final essay.</li>
+         
+        </ol>
+      </section>
+
+      <section class="idea-block">
+        <h2>05 — Tools, Production & AI Roles</h2>
+        <p><strong>Tools:</strong> p5.js, HTML, CSS, JavaScript, VS Code, browser testing</p>
+        <div class="two-col">
+          <div>
+            <h3>Human Role</h3>
+            <p>I own the core artistic concept and define the overall system architecture and interaction rules. I hold all final creative decisions.
+Responsibilities</p>
+          </div>
+          <div>
+            <h3>AI Agent Role</h3>
+            <p>AI works as a supporting creative agent within the workflow</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="idea-block">
+        <h2>06 — Open Question & Challenges</h2>
+        <div class="question-box">
+          How can I balance computational autonomy and human control so that the generative system contributes creatively without overriding human artistic intention?
+        </div>
+        <p>Challenges include browser performance, meaningful interaction design, and making the human-AI relationship understandable in both code and writing.</p>
+      </section>
+    </div>
+
+    <!-- ===================== Visual Journey ===================== -->
+    <div class="tab-content" id="visualjourney">
+      <h1>Visual Journey</h1>
+      <p class="subtitle">Moodboard, visual research and initial sketches</p>
+
+      <section class="content-block">
+        <h2>Moodboard Theme</h2>
+        <p>The visual language focuses on soft Morandi muted spheres, collision events, expanding ripple echoes, subtle gradient backgrounds. Collisions represent meeting of digital memories; ripples are temporary echoes.</p>
+      </section>
+
+      <section class="content-block">
+        <h2>Artist Research</h2>
+        <ul>
+          <li><strong>Casey Reas</strong> — behaviour-based generative physical simulation</li>
+          <li><strong>Ryoji Ikeda</strong> — minimalist traces and transient visual events</li>
+          <li><strong>Refik Anadol</strong> — memory archives and emergent visual phenomena</li>
+        </ul>
+      </section>
+
+      <section class="content-block">
+        <h2>Initial Sketches</h2>
+        <p>Soft orb physics simulation, collision detection, colour swap, ripple ring echoes, seed-based repeatable randomness.</p>
+      </section>
+    </div>
+
+    <!-- ===================== Working Log ===================== -->
+    <div class="tab-content" id="workinglog">
+      <h1>Working Log</h1>
+      <p class="subtitle">Date + Action + Evidence + Problem + Next Step</p>
+
+      <div class="log-entry">
+        <p><strong>Date:</strong> Week 6</p>
+        <p><strong>Action:</strong> Finished idea presentation draft, confirmed project concept and p5.js technical route.</p>
+        <p><strong>Evidence:</strong> index.html, style.css, sketch.js, interactive homepage demo.</p>
+        <p><strong>Problem:</strong> Not yet tested particle system performance limit in browser.</p>
+        <p><strong>Next Step:</strong> Build basic p5.js particle canvas prototype, test how many particles can run smoothly.</p>
+      </div>
+
+      <div class="log-entry">
+        <p><strong>Date:</strong> Week 7</p>
+        <p><strong>Action:</strong> Coded basic particle system, implemented mouse position interaction.</p>
+        <p><strong>Evidence:</strong> Prototype screenshot, working p5.js sketch file.</p>
+        <p><strong>Problem:</strong> Particle quantity over 300 causes obvious frame drop on some browsers.</p>
+        <p><strong>Next Step:</strong> Research particle batch rendering optimisation; adjust fade logic to reduce computation.</p>
+      </div>
+    </div>
+
+    <!-- ===================== Artwork Demo ===================== -->
+    <div class="tab-content" id="artworkdemo">
+      <h1>Artwork Demo</h1>
+      <p class="subtitle">Switch between different interactive experiments</p>
+
+      <div class="demo-switcher">
+        <button class="demo-btn active" data-demo="memoryParticles">Demo 1: Memory Particles</button>
+        <button class="demo-btn" data-demo="echoTrails">Demo 2: Echo Trails</button>
+        <button class="demo-btn" data-demo="aiColorFields">Demo 3: AI Color Fields</button>
+        <button class="demo-btn" data-demo="noiseDrift">Demo 4: Noise Drift</button>
+      </div>
+
+      <div id="demo-canvas-container"></div>
+
+      <div class="demo-description">
+        <p id="demo-text">Particles are attracted by the mouse. They represent memory fragments moving through digital space.</p>
+      </div>
+    </div>
+
+    <!-- ===================== Reflection ===================== -->
+    <div class="tab-content" id="reflection">
+      <h1>Reflection</h1>
+
+      <section class="content-block">
+        <h2>What worked well</h2>
+        <p>The tab-structured website neatly presents the whole project. The browser physics simulation successfully embodies my core "echo" concept: user interactions spawn floating orbs, and collisions leave transient ripple marks as visual echoes of each moment of contact. The restrained colour palette establishes a quiet, meditative mood that aligns with the theme of fragile digital memory.</p>
+      </section>
+
+      <section class="content-block">
+        <h2>Limitations</h2>
+        <p>The physics engine struggles when the quantity of orbs increases, causing frame-rate drops in some browsers. The visual system still lacks emergent complexity: ripple behaviour follows unchanging rules, and colour generation remains constrained within a predefined set of tones. The connection between audience input and AI-driven variation is subtle and not immediately perceptible to visitors.</p>
+      </section>
+
+      <section class="content-block">
+        <h2>Future Development</h2>
+        <p>I plan to refine performance optimisations for the physics simulation. I want to introduce variable ripple lifespans controlled by AI logic, and build a lightweight memory archive that captures the visitor’s interaction history. I will also expand the colour system so AI can generate unique, cohesive colour variations rather than only drawing from fixed preset swatches.</p>
+      </section>
+    </div>
+
+  </div>
+
+  <script src="sketch.js"></script>
+  <script>
+    // Tab 切换
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    // Demo 切换
+    const demoButtons = document.querySelectorAll('.demo-btn');
+    const demoTexts = {
+      memoryParticles: "Particles are attracted by the mouse. They represent memory fragments moving through digital space.",
+      echoTrails: "Particles leave fading trails. The mouse creates echo-like traces that slowly dissolve.",
+      aiColorFields: "Click to regenerate AI colour fields. The AI agent shifts the visual atmosphere of the whole work.",
+      noiseDrift: "Particles drift with noise flow. Mouse movement disturbs the drift like interference in memory."
+    };
+
+    demoButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        demoButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('demo-text').innerText = demoTexts[btn.dataset.demo];
+      });
+    });
+  </script>
+
+</body>
+</html>
